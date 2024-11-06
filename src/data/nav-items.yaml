@@ -6,8 +6,6 @@
       path: /all-about-carbon/who-uses-carbon/
     - title: The Carbon ecosystem
       path: /all-about-carbon/the-carbon-ecosystem/
-    - title: Partners
-      path: /all-about-carbon/partners/
     - title: Releases
       path: /all-about-carbon/releases/
 - title: What’s happening
@@ -42,11 +40,11 @@
 - title: Contributing
   pages:
     - title: Get started
-      path: /contributing/get-started/
-    - title: Code
-      path: /contributing/code/
-    - title: Design
-      path: /contributing/design/
+      path: /contributing/get-started/overview/
+    - title: Product Development Lifecycle
+      path: /contributing/product-development-lifecycle/
+    - title: Component checklist
+      path: /contributing/component-checklist/
     - title: Documentation
       path: /contributing/documentation/
 - title: Migrating
@@ -56,34 +54,40 @@
     - title: FAQs
       path: /migrating/faq/
   hasDivider: true
-- title: Guidelines
+- title: Elements
   pages:
     - title: 2x Grid
-      path: /guidelines/2x-grid/overview/
+      path: /elements/2x-grid/overview/
+    - title: Color
+      path: /elements/color/overview/
+    - title: Icons
+      path: /elements/icons/library/
+    - title: Pictograms
+      path: /elements/pictograms/library/
+    - title: Motion
+      path: /elements/motion/overview/
+    - title: Spacing
+      path: /elements/spacing/overview/
+    - title: Themes
+      path: /elements/themes/overview/
+    - title: Typography
+      path: /elements/typography/overview/
+- title: Guidelines
+  pages:
     - title: Accessibility
       path: /guidelines/accessibility/overview/
+    - title: Carbon for AI
+      path: /guidelines/carbon-for-ai/
     - title: Content
       path: /guidelines/content/overview/
-    - title: Color
-      path: /guidelines/color/overview/
-    - title: Icons
-      path: /guidelines/icons/library/
-    - title: Pictograms
-      path: /guidelines/pictograms/library/
-    - title: Motion
-      path: /guidelines/motion/overview/
-    - title: Spacing
-      path: /guidelines/spacing/overview/
-    - title: Themes
-      path: /guidelines/themes/overview/
-    - title: Typography
-      path: /guidelines/typography/overview/
 - title: Components
   pages:
     - title: Overview
       path: /components/overview/components
     - title: Accordion
       path: /components/accordion/usage/
+    - title: AI label
+      path: /components/ai-label/usage/
     - title: Breadcrumb
       path: /components/breadcrumb/usage/
     - title: Button
@@ -114,12 +118,12 @@
       path: /components/list/usage/
     - title: Loading
       path: /components/loading/usage/
-    - title: Modal
-      path: /components/modal/usage/
     - title: Menu
       path: /components/menu/usage/
     - title: Menu buttons
       path: /components/menu-buttons/usage/
+    - title: Modal
+      path: /components/modal/usage/
     - title: Notification
       path: /components/notification/usage/
     - title: Number input

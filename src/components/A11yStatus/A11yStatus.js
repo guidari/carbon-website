@@ -24,7 +24,6 @@ import {
   help,
   hidden,
   moreLink,
-  table,
   variant,
   version,
   headingLink,
@@ -295,7 +294,7 @@ const A11yStatus = ({ components, layout }) => {
                 <Link
                   href={githubUrl}
                   renderIcon={() => <Launch aria-label="Launch" />}>
-                  Github link
+                  GitHub link
                 </Link>
               </td>
             </tr>
@@ -373,36 +372,31 @@ const A11yStatus = ({ components, layout }) => {
   } else {
     return (
       <>
-        <Row>
-          <Column colLg={12}>
-            {components ? (
-              <H3>
-                <span id="accessibility-testing-status">
-                  Accessibility testing status
-                </span>
-                {helpTooltip}
-              </H3>
-            ) : (
-              <>
-                <span
-                  id="all-component-accessibility-status-anchor"
-                  className={headingLink}></span>
-                <H2>All component accessibility status{helpTooltip}</H2>
-                <p>
-                  This table reflects the current AVT status of stable
-                  components within @carbon/react.
-                </p>
-              </>
-            )}
-            <p className={version}>
-              <strong>Latest version:</strong> {reactVersion} |{' '}
-              <strong>Framework:</strong> React (@carbon/react)
+        {components ? (
+          <H3>
+            <span id="accessibility-testing-status">
+              Accessibility testing status
+            </span>
+            {helpTooltip}
+          </H3>
+        ) : (
+          <>
+            <span
+              id="all-component-accessibility-status-anchor"
+              className={headingLink}></span>
+            <H2>All component accessibility status{helpTooltip}</H2>
+            <p>
+              This table reflects the current AVT status of stable components
+              within @carbon/react.
             </p>
-          </Column>
-          <Column
-            colLg={12}
-            noGutterSm
-            className={`${table} page-table__container`}>
+          </>
+        )}
+        <p className={version}>
+          <strong>Latest version:</strong> {reactVersion} |{' '}
+          <strong>Framework:</strong> React (@carbon/react)
+        </p>
+        <Row>
+          <Column colLg={12} noGutterSm className="page-table__container">
             <table className="page-table">
               <thead>
                 <tr>

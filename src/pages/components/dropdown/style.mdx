@@ -6,6 +6,23 @@ description:
 tabs: ['Usage', 'Style', 'Code', 'Accessibility']
 ---
 
+<PageDescription>
+
+The following page documents visual specifications such as color, typography,
+structure, and size and AI presence.
+
+</PageDescription>
+
+<AnchorLinks>
+
+<AnchorLink>Color</AnchorLink>
+<AnchorLink>Typography</AnchorLink>
+<AnchorLink>Structure</AnchorLink>
+<AnchorLink>Sizes</AnchorLink>
+<AnchorLink>AI presence</AnchorLink>
+
+</AnchorLinks>
+
 ## Color
 
 | Element            | Property         | Color token                  |
@@ -17,6 +34,7 @@ tabs: ['Usage', 'Style', 'Code', 'Accessibility']
 | Field              | background-color | `$field` \*                  |
 |                    | border-bottom    | `$border-strong` \*          |
 | Chevron icon       | svg              | `$icon-primary`              |
+| Vertical divider   | border           | `$border-subtle` \*          |
 | Menu option        | text-color       | `$text-secondary`            |
 |                    | background-color | `$layer` \*                  |
 |                    | border-top       | `$border-subtle` \*          |
@@ -70,7 +88,10 @@ tabs: ['Usage', 'Style', 'Code', 'Accessibility']
 | Warning       | Warning message      | text-color       | `$text-primary`       |
 |               | Warning icon         | svg              | `$support-warning`    |
 | Active        | Menu option          | background-color | `$layer-active` \*    |
-| Selected      | Menu option          | background-color | `$layer-selected` \*  |
+| Selected      | Chevron icon         | svg              | `$icon-primary`       |
+|               | Vertical divider     | border           | `$border-subtle` \*   |
+|               | Close icon           | svg              | `$icon-primary`       |
+|               | Menu option          | background-color | `$layer-selected` \*  |
 |               | Menu option          | checkmark        | `$icon-primary`       |
 | Multiselected | Tag                  | background-color | `$background-inverse` |
 |               | Tag                  | text-color       | `$text-inverse`       |
@@ -222,6 +243,9 @@ be the same width and appropriately fit the design, layout, and content.
 
 ### Fluid dropdown
 
+Fluid components for all dropdown variants would adhere to the same specs as the
+dropdown fluid component.
+
 | Element      | Property                    | px / rem   | Spacing token |
 | ------------ | --------------------------- | ---------- | ------------- |
 | Label        | margin-bottom               | 4 / 0.25   | `$spacing-02` |
@@ -244,13 +268,14 @@ be the same width and appropriately fit the design, layout, and content.
 
 ### Combo box
 
-| Element      | Property      | px / rem | Spacing token |
-| ------------ | ------------- | -------- | ------------- |
-| Label        | margin-bottom | 8 / 0.5  | `$spacing-03` |
-| Field        | padding-left  | 16 / 1   | `$spacing-05` |
-|              | padding-right | 72 / 4.5 | –             |
-| Chevron icon | padding-right | 16 / 1   | `$spacing-05` |
-| Clear icon   | padding-right | 8 / 0.5  | `$spacing-03` |
+| Element          | Property                    | px / rem | Spacing token |
+| ---------------- | --------------------------- | -------- | ------------- |
+| Label            | margin-bottom               | 8 / 0.5  | `$spacing-03` |
+| Field            | padding-left                | 16 / 1   | `$spacing-05` |
+|                  | padding-right               | 72 / 4.5 | –             |
+| Chevron icon     | padding-right               | 16 / 1   | `$spacing-05` |
+| Vertical divider | padding-right, padding-left | 8 / 0.5  | `$spacing-03` |
+| Clear icon       | padding-right               | 8 / 0.5  | `$spacing-03` |
 
 <div className="image--fixed">
 
@@ -345,3 +370,47 @@ condensed.
 </Row>
 
 <Caption>Fluid dropdown sizes | px / rem</Caption>
+
+## AI presence
+
+The following are the unique styles applied to the component when the AI label
+is present. Unless specified, all other tokens in the component remain the same
+as the non-AI variant.
+
+For more information on the AI style elements, see the
+[Carbon for AI](/guidelines/carbon-for-ai/) guidelines.
+
+| Element         | Property         | Token / Size        |
+| --------------- | ---------------- | ------------------- |
+| Linear gradient | start            | `$ai-aura-start-sm` |
+|                 | stop             | `$ai-aura-stop`     |
+| Field           | border-bottom    | `$ai-border-strong` |
+|                 | background color | `$field`\*          |
+| AI label        | size             | mini                |
+
+<Caption>
+  * Denotes a contextual color token that will change values based on the layer
+  it is placed on.
+</Caption>
+
+<Row>
+<Column colLg={8}>
+
+<Tabs>
+
+<Tab label="Default">
+
+![Default dropdown AI example](images/dropdown-style-ai-presence-ai-revert-default.png)
+
+</Tab>
+
+<Tab label="Fluid">
+
+![Fluid dropdown AI example](images/dropdown-style-ai-presence-ai-revert-default.png)
+
+</Tab>
+
+</Tabs>
+
+</Column>
+</Row>

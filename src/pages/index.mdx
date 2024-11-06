@@ -1,53 +1,58 @@
-import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
-
+import HomepageTemplate from '../components/Homepage.js';
 export default HomepageTemplate;
 
-<FeatureCard
-    href="/designing/get-started"
-    subTitle="Start"
-    title="Designing"
-    actionIcon="arrowRight"
-    className="homepage-feature"
-    >
+<Row className="image-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    
+  <ImageCard
+      title="Design"
+      titleColor="dark"
+      aspectRatio="1:1"
+      href="https://carbondesignsystem.com/designing/get-started"
+      actionIcon="arrowRight"
+      iconColor="dark"
+      >
 
-<ArtDirection>
+![Design](/homepage/images/homepage-design.png)
 
-![Get started for designers](./homepage/images/light-getting-started-designers-mobile.png)
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+    <ImageCard
+      title="Develop"
+      aspectRatio="1:1"
+      href="https://carbondesignsystem.com/developing/get-started"
+      actionIcon="arrowRight"
+      titleColor="dark"
+      iconColor="dark"
+      >
 
-![Get started for designers](./homepage/images/light-getting-started-designers-tablet.png)
+![Develop](/homepage/images/homepage-develop.png)
 
-![Get started for designers](./homepage/images/light-getting-started-designers.png)
+  </ImageCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterSm>
+      <ImageCard
+      title="Migrate"
+      aspectRatio="1:1"
+      href="https://carbondesignsystem.com/migrating/guide/overview/"
+      actionIcon="arrowRight"
+      titleColor="dark"
+      iconColor="dark"
+      >
 
-</ArtDirection>
+![Migrate](/homepage/images/homepage-migration.png)
 
-</FeatureCard>
-
-<FeatureCard
-    href="/developing/get-started"
-    subTitle="Start"
-    title="Developing"
-    actionIcon="arrowRight"
-    className="homepage-feature"
-    >
-
-<ArtDirection>
-
-![Get started for developers](./homepage/images/light-getting-started-developers-mobile.png)
-
-![Get started for designers](./homepage/images/light-getting-started-developers-tablet.png)
-
-![Get started for developers](./homepage/images/light-getting-started-developers.png)
-
-</ArtDirection>
-
-</FeatureCard>
+  </ImageCard>
+</Column>
+</Row>
 
 ### Other resources
 
 The component libraries give developers a collection of reusable components for
 building websites and user interfaces.
 
-<Row className="resource-card-group">
+<Row className="resource-card-group-3-across">
 <Column colLg={4} colMd={4} noGutterSm>
   <ResourceCard
     subTitle="Figma kit"
@@ -67,7 +72,7 @@ building websites and user interfaces.
 <Column colLg={4} colMd={4} noGutterSm>
   <ResourceCard
     subTitle="Carbon React components"
-    href="https://github.com/carbon-design-system/carbon/tree/v10/packages/react"
+    href="https://github.com/carbon-design-system/carbon/tree/main/packages/react"
     >
 
 <MdxIcon name="github" />
@@ -78,16 +83,6 @@ building websites and user interfaces.
   <ResourceCard
     subTitle="Carbon Angular components"
     href="https://github.com/IBM/carbon-components-angular"
-    >
-
-<MdxIcon name="github" />
-
-  </ResourceCard>
-</Column>
-<Column colLg={4} colMd={4}  noGutterSm>
-  <ResourceCard
-    subTitle="Carbon Vanilla components"
-    href="https://github.com/carbon-design-system/carbon/tree/v10/packages/components"
     >
 
 <MdxIcon name="github" />
@@ -116,7 +111,7 @@ building websites and user interfaces.
 <Column colLg={4} colMd={4} noGutterSm>
   <ResourceCard
     subTitle="Carbon Web Components"
-    href="https://github.com/carbon-design-system/carbon-web-components"
+    href="https://github.com/carbon-design-system/carbon/tree/main/packages/web-components"
     >
     <MdxIcon name="github" />
   </ResourceCard>
